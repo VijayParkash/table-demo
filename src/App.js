@@ -11,7 +11,6 @@ function App(props) {
     const getUsers = async () => {
       const userData = await props.fetchUsers();
       localStorage.setItem("users", [JSON.stringify(userData.users.data)]);
-      console.log(userData.users.data);
     };
     getUsers();
     setUserData(JSON.parse(localStorage.getItem("users")));
